@@ -133,6 +133,7 @@ header {
     background-color: #fafbfc;
     display: flex;
     justify-content: space-evenly;
+    
 }
 .footer_column{
     display: flex;

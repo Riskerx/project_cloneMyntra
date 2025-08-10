@@ -63,3 +63,23 @@ window.addEventListener('scroll', () => {
         scrollToTopBtn.style.display = 'none';
     }
 });
+
+// index.js
+
+// Inject header and footer into all pages
+function loadLayout() {
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+}
+
+// Call it once DOM is ready
+document.addEventListener('DOMContentLoaded', loadLayout);
